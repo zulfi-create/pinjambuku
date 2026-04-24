@@ -19,14 +19,14 @@
 
 **Sistem Peminjaman Buku (Perpustakaan Digital)**
 
-Di era digitalisasi saat ini, kebutuhan akan sistem informasi yang cepat dan efisien sangat diperlukan, termasuk dalam dunia pendidikan dan literasi. Oleh karena itu, aplikasi **Sistem Peminjaman Buku (Perpustakaan Digital)** ini dibangun untuk memberikan solusi cerdas dalam mengelola alur sirkulasi buku dari model konvensional menjadi terkomputerisasi.
+Sistem Peminjaman Buku (Perpustakaan Digital) adalah aplikasi yang dibuat untuk membantu proses peminjaman buku menjadi lebih cepat dan praktis. Sistem ini menggantikan cara manual (tulis tangan) menjadi sistem komputer, sehingga lebih efisien dan rapi.
 
-Sistem ini tidak hanya bertujuan untuk mendigitalkan proses pencatatan, tetapi juga mempermudah dan mempercepat pelayanan perpustakaan sehingga anggota dapat dengan nyaman mencari dan meminjam buku tanpa harus repot dengan birokrasi kertas.
+Dengan aplikasi ini, pengguna bisa mencari dan meminjam buku dengan mudah tanpa harus melalui proses yang rumit.
 
-Untuk memastikan sistem berjalan dengan baik dan aman, aplikasi ini dibagi ke dalam dua pilar utama (*role access*):
+Sistem ini memiliki dua jenis pengguna:
 
-- **Administrator (Pustakawan)**: Bertindak sebagai pengelola penuh sistem. Admin memiliki wewenang untuk menambah, mengubah, atau menghapus katalog buku, mengelola data anggota yang terdaftar, serta memantau seluruh log transaksi peminjaman dan pengembalian secara *real-time*.
-- **User (Anggota Perpustakaan)**: Pengguna yang telah terdaftar dapat dengan mudah mengeksplorasi koleksi buku yang tersedia melalui antarmuka yang ramah pengguna. Setelah menemukan buku yang diinginkan, mereka dapat langsung mengajukan peminjaman secara mandiri melalui sistem.
+**Administrator (Pustakawan):** Bertugas mengelola sistem, seperti menambah atau mengedit data buku, mengelola anggota, serta memantau proses peminjaman dan pengembalian.
+**User (Anggota):** Bisa melihat daftar buku yang tersedia dan melakukan peminjaman secara langsung melalui sistem.
 
 ---
 
