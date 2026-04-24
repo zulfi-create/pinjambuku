@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= esc($title ?? 'Perpustakaan Digital') ?> &mdash; LibraCI</title>
-    <meta name="description" content="Sistem Peminjaman Buku Digital - LibraCI">
+    <title><?= esc($title ?? 'Perpustakaan Digital') ?> &mdash; pinjamBukuTJG</title>
+    <meta name="description" content="Sistem Peminjaman Buku Digital - pinjamBukuTJG">
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -269,7 +269,7 @@
 <!-- SIDEBAR -->
 <nav id="sidebar">
     <div class="sidebar-brand">
-        <h5><i class="bi bi-book-half me-2"></i>Libra<span>CI</span></h5>
+        <h5><i class="bi bi-book-half me-2"></i>pinjamBuku<span>TJG</span></h5>
         <small style="color: #475569; font-size: 0.7rem;">Sistem Peminjaman Buku</small>
     </div>
 

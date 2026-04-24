@@ -1,4 +1,4 @@
-# LibraCI - Sistem Peminjaman Buku
+# pinjamBukuTJG - Sistem Peminjaman Buku
 
 > Proyek Mata Kuliah Pemrograman Web  
 > Framework: CodeIgniter 4 | Database: MySQL
