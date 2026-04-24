@@ -207,16 +207,3 @@ peminjaman_buku_ci4/
 ├── env                       ← Konfigurasi environment
 └── README.md
 ```
-
----
-
-## Teknologi yang Digunakan
-
-| Teknologi       | Versi  | Kegunaan                     |
-|-----------------|--------|------------------------------|
-| CodeIgniter     | 4.x    | PHP Framework (MVC)          |
-| MySQL/MariaDB   | 8.x    | Database                     |
-| PHP             | 8.1+   | Server-side Language         |
-| Bootstrap       | 5.3    | UI Framework (via CDN)       |
-| Bootstrap Icons | 1.11   | Icon Library (via CDN)       |
-| Google Fonts    | Inter  | Typography                   |
