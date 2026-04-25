@@ -12,7 +12,7 @@ class BukuModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['title', 'author', 'isbn', 'description', 'stock', 'status'];
+    protected $allowedFields    = ['category_id', 'title', 'author', 'isbn', 'description', 'stock', 'status'];
 
     // Dates
     protected $useTimestamps = true;

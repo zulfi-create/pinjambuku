@@ -16,6 +16,7 @@
                         <th class="ps-3">#</th>
                         <th>Judul</th>
                         <th>Penulis</th>
+                        <th>Kategori</th>
                         <th>ISBN</th>
                         <th>Stok</th>
                         <th>Status</th>
@@ -41,6 +42,7 @@
                                     <?php endif; ?>
                                 </td>
                                 <td><?= esc($b['author']) ?></td>
+                                <td><?= esc($b['nama_kategori'] ?? 'Tanpa Kategori') ?></td>
                                 <td><small class="text-muted"><?= esc($b['isbn'] ?? '-') ?></small></td>
                                 <td>
                                     <span class="fw-semibold <?= $b['stock'] == 0 ? 'text-danger' : 'text-success' ?>">

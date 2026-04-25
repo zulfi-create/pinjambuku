@@ -4,14 +4,17 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use App\Models\BukuModel;
+use App\Models\KategoriModel;
 
 class BukuController extends BaseController
 {
     protected BukuModel $bukuModel;
+    protected KategoriModel $kategoriModel;
 
     public function __construct()
     {
         $this->bukuModel = new BukuModel();
+        $this->kategoriModel = new KategoriModel();
     }
 
     /** Daftar semua buku */
@@ -19,7 +22,10 @@ class BukuController extends BaseController
     {
         $data = [
             'title' => 'Kelola Buku',
-            'buku' => $this->bukuModel->orderBy('created_at', 'DESC')->findAll(),
+            'buku' => $this->bukuModel->select('buku.*, kategori.nama_kategori')
+                                      ->join('kategori', 'kategori.id = buku.category_id', 'left')
+                                      ->orderBy('buku.created_at', 'DESC')
+                                      ->findAll(),
         ];
         return view('buku/index', $data);
     }
@@ -27,7 +33,11 @@ class BukuController extends BaseController
     /** Form tambah buku */
     public function create(): string
     {
-        return view('buku/create', ['title' => 'Tambah Buku']);
+        $data = [
+            'title'      => 'Tambah Buku',
+            'categories' => $this->kategoriModel->findAll()
+        ];
+        return view('buku/create', $data);
     }
 
     /** Simpan buku baru */
@@ -44,6 +54,7 @@ class BukuController extends BaseController
         }
 
         $this->bukuModel->insert([
+            'category_id' => $this->request->getPost('category_id'),
             'title'       => $this->request->getPost('title'),
             'author'      => $this->request->getPost('author'),
             'isbn'        => $this->request->getPost('isbn'),
@@ -62,7 +73,12 @@ class BukuController extends BaseController
         if (!$buku) {
             return redirect()->to('/admin/buku')->with('error', 'Buku tidak ditemukan.');
         }
-        return view('buku/edit', ['title' => 'Edit Buku', 'book' => $buku]);
+        $data = [
+            'title'      => 'Edit Buku',
+            'book'       => $buku,
+            'categories' => $this->kategoriModel->findAll()
+        ];
+        return view('buku/edit', $data);
     }
 
     /** Update data buku */
@@ -80,6 +96,7 @@ class BukuController extends BaseController
 
         $stock = (int) $this->request->getPost('stock');
         $this->bukuModel->update($id, [
+            'category_id' => $this->request->getPost('category_id'),
             'title'       => $this->request->getPost('title'),
             'author'      => $this->request->getPost('author'),
             'isbn'        => $this->request->getPost('isbn'),

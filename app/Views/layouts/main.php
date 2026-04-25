@@ -282,6 +282,9 @@
             <a href="<?= base_url('admin/buku') ?>" class="<?= str_starts_with(uri_string(), 'admin/buku') ? 'active' : '' ?>">
                 <i class="bi bi-journals"></i> Kelola Buku
             </a>
+            <a href="<?= base_url('admin/kategori') ?>" class="<?= str_starts_with(uri_string(), 'admin/kategori') ? 'active' : '' ?>">
+                <i class="bi bi-tag"></i> Kelola Kategori
+            </a>
             <a href="<?= base_url('admin/users') ?>" class="<?= str_starts_with(uri_string(), 'admin/users') ? 'active' : '' ?>">
                 <i class="bi bi-people"></i> Kelola Pengguna
             </a>

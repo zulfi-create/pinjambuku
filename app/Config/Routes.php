@@ -28,6 +28,14 @@ $routes->group('admin', ['filter' => 'adminFilter'], function ($routes) {
     $routes->post('buku/update/(:num)', 'Admin\BukuController::update/$1', ['as' => 'admin.buku.update']);
     $routes->get('buku/delete/(:num)', 'Admin\BukuController::delete/$1', ['as' => 'admin.buku.delete']);
 
+    // CRUD Kategori Buku
+    $routes->get('kategori', 'Admin\KategoriController::index', ['as' => 'admin.kategori']);
+    $routes->get('kategori/create', 'Admin\KategoriController::create', ['as' => 'admin.kategori.create']);
+    $routes->post('kategori/store', 'Admin\KategoriController::store', ['as' => 'admin.kategori.store']);
+    $routes->get('kategori/edit/(:num)', 'Admin\KategoriController::edit/$1', ['as' => 'admin.kategori.edit']);
+    $routes->post('kategori/update/(:num)', 'Admin\KategoriController::update/$1', ['as' => 'admin.kategori.update']);
+    $routes->get('kategori/delete/(:num)', 'Admin\KategoriController::delete/$1', ['as' => 'admin.kategori.delete']);
+
     // CRUD User
     $routes->get('users', 'Admin\UserController::index', ['as' => 'admin.users']);
     $routes->get('users/create', 'Admin\UserController::create', ['as' => 'admin.users.create']);

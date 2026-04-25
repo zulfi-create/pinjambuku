@@ -19,6 +19,18 @@
                     </div>
 
                     <div class="mb-3">
+                        <label for="category_id" class="form-label fw-semibold">Kategori <span class="text-danger">*</span></label>
+                        <select class="form-select" id="category_id" name="category_id" required>
+                            <option value="" disabled selected>Pilih Kategori</option>
+                            <?php foreach ($categories as $cat): ?>
+                                <option value="<?= $cat['id'] ?>" <?= old('category_id') == $cat['id'] ? 'selected' : '' ?>>
+                                    <?= esc($cat['nama_kategori']) ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
                         <label for="author" class="form-label fw-semibold">Penulis <span class="text-danger">*</span></label>
                         <input type="text" class="form-control" id="author" name="author"
                                placeholder="Contoh: Andrea Hirata"
